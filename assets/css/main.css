@@ -156,7 +156,7 @@ input, select, textarea {
 	}
 
 	strong, b {
-		font-weight: 300;
+		font-weight: 400;
 		color: #666;
 	}
 
@@ -215,7 +215,9 @@ input, select, textarea {
 		text-shadow: -1.8px 1.8px 0.5px rgba(0, 132, 255, 0.418);
 	}
 
-
+	#aboutMePic{
+		height:200%;
+	}
 
 
 /* Container */
@@ -224,7 +226,21 @@ input, select, textarea {
 		margin: 0 auto;
 		max-width: 100%;
 		width: 1400px;
+		
 	}
+
+	#aboutMeContent{
+		text-align: left;
+		font-size: 78%;
+		line-height: 158%;
+	}
+
+	#projectsContent{
+		text-align: left;
+		font-size: 78%;
+		line-height: 158%;
+	}
+
 
 		@media screen and (min-width: 961px) and (max-width: 1880px) {
 
@@ -1791,6 +1807,7 @@ input, select, textarea {
 		 .image.featured {
 			display: block;
 			width: 100%;
+	
 			margin: 0 0 2em 0;
 		} 
 
@@ -2274,7 +2291,7 @@ input, select, textarea {
 
 			#main > section.one {
 				background-color: #81918E;
-				background-image: url("../../NewImages/wallpapersden.com_programming-coding-language_2560x1440.jpg");
+				background-image: url("../../NewImages/code.jpg");
 			}
 
 			#main > section.two {
