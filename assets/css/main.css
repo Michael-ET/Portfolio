@@ -215,12 +215,18 @@ input, select, textarea {
 		height:200%;
 	}
 
-
-
 	.projTitle:hover{
 		color:#1e95da;
 		/* text-decoration-line: underline;
 		text-decoration-color: #1e95da; */
+	}
+
+	.techTitle{
+		background-color: #ffffff;
+	}
+
+	.pinsTitle{
+		background-color: #ffffffc0;
 	}
 
 	.item{
@@ -229,7 +235,22 @@ input, select, textarea {
 	}
 
 	.item:hover{
-		box-shadow: 4px 4px 6px #222729;
+		box-shadow: 4px 4px 6px #222729;	
+	}
+	#pins1 {
+		display: none;
+	}
+	#pins2 {
+		display: none;
+	}
+	#pins3 {
+		display: none;
+	}
+
+	.pinsText{
+		text-align: left;
+		font-size: 78%;
+		line-height: 158%;
 		
 	}
 
@@ -1771,6 +1792,7 @@ input, select, textarea {
 
 	section, article {
 		margin-bottom: 10em;
+		border-style: solid;
 	}
 
 		section > :last-child,
@@ -2295,6 +2317,8 @@ input, select, textarea {
 
 					#main > section.dark a:hover {
 						border-bottom-color: rgba(255, 255, 255, 0);
+						
+
 					}
 
 			#main > section.cover {
@@ -2306,6 +2330,7 @@ input, select, textarea {
 			#main > section.one {
 				background-color: #81918E;
 				background-image: url("../../NewImages/code.jpg");
+				border-bottom-color: rgba(255, 255, 255, 0);
 			}
 
 			#main > section.two {

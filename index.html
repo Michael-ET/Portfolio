@@ -6,39 +6,34 @@
 -->
 <html>
 	<head>
-		<title >Michael Tuner : Front-End Developer Portfolio</title>
+		<title >Michael Tuner : Full-Stack Developer Portfolio</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body class="is-preload">
-
 		<!-- Header -->
 			<div id="header">
-
 				<div class="top">
-
 					<!-- Logo -->
 						<div id="logo">
 							<span class="image avatar48"><img src="NewImages/IMG_20211118_151751.jpg" alt="" /></span>
 							<h1 id="title">Michael Turner</h1>
-							<p>Front-End Developer</p>
+							<p>Full-Stack Developer</p>
 						</div>
-
 					<!-- Nav -->
 						<nav id="nav">
 							<ul>
 								<li><a href="#top" id="top-link"><span class="icon solid fa-home">Intro</span></a></li>
-								<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Projects</span></a></li>
+								<li><a href="#exp" id="exp-link"><span class="icon solid fa-th">Professional Experience</span></a></li>
+								<li><a href="#tech" id="tech-link"><span class="icon solid fa-th">Technical Capabilities</span></a></li>
+								<li><a href="#portfolio" id="portfolio-link"><span class="icon solid fa-th">Personal Projects</span></a></li>
 								<li><a href="#about" id="about-link"><span class="icon solid fa-user">About Me</span></a></li>
 								<li><a href="#contact" id="contact-link"><span class="icon solid fa-envelope">Contact</span></a></li>
 							</ul>
 						</nav>
-
 				</div>
-
 				<div class="bottom">
-
 					<!-- Social Icons -->
 						<ul class="icons">
 							<!-- <li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
@@ -47,66 +42,221 @@
 							<li><a href="https://linkedin.com/in/michael-turner-8a0690ba/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
 							<li><a href="#contact" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
 						</ul>
-
 				</div>
-
 			</div>
-
-		<!-- Main -->
+		<!-- Banner/header -->
 			<div id="main">
-
 				<!-- Intro -->
 					<section id="top" class="one dark cover">
 						<div class="container">
-
 							<header>
-								<h2 id='titleText'>Michael Turner : Front-End Developer</h2>
+								<h2 id='titleText'>Michael Turner : Full-Stack Developer</h2>
 								<h3 class="alt" id='titleText'> Welcome to my protfolio page </h3>
-								<p id='titleText'>Here you can view my recent work, hear about my journey in developing and link to my public projects</p>
+								<p id='titleText'>Here you can view my recent work, read about my journey in developing and link to my personal projects and code recources</p>
+
 							</header>
-
-							<footer>
+							<!-- <footer>
 								<a href="#portfolio" class="button scrolly">Projects</a>
-							</footer>
-
+			 				</footer> -->
 						</div>
 					</section>
-
+					<!-- Professional experience -->
+					<section id="exp" class="two">
+						<div class="container">
+							<header>
+								<h2>Professional Experience</h2>
+							</header>	
+							<h4>The Planning Inspectorate (Civil Service)</h4>
+							<br>
+							<p id="projectsContent">
+								During my time as an EO associate developer with the planning inspectorate I had the opportunity to manage, maintain and cobntribute to 
+								complex web applications used for a variety of business operations. The applications on display below were designed for uses such as document sharing, 
+								peer reviewing, tracking case data (planning propsals), timekeeping, document templating and more. 
+								<br><br>
+								To find out more about a project click the image.
+							</p>							
+								<div class="row">
+									<div class="col-4 col-12-mobile" onclick="displayPinsProjectText('pins1')">
+										<article id='proj' class="item">
+											<a target="_blank"  class="image fit"><img src="pinsimages/C1SQUARE.PNG" alt="" /></a>
+											<a target='_blank' class='pinsTitle'>
+												<header>
+													<h3 class='pinsTitle'>Checkmark</h3>
+												</header>	
+											</a>
+										</article>
+									</div>
+									<div class="col-4 col-12-mobile" onclick="displayPinsProjectText('pins2')">
+										<article id='proj' class="item">
+											<a target="_blank"  class="image fit"><img src="pinsimages/d1edit.png" alt="" /></a>
+											<a target='_blank' class='pinsTitle'>
+												<header>
+													<h3 class='pinsTitle'>DaRT (Decisions & reporting templates)</h3>
+												</header>	
+											</a>
+										</article>
+									</div>
+									<div class="col-4 col-12-mobile" onclick="displayPinsProjectText('pins3')">
+										<article id='proj' class="item">
+											<a target="_blank"  class="image fit"><img src="pinsimages/T1EDIT.png" alt="" /></a>
+											<a target='_blank' class='pinsTitle'>
+												<header>
+													<h3 class='pinsTitle'>TimeSheets</h3>
+												</header>	
+											</a>
+										</article>
+									</div>
+								</div>
+							</div>
+							<script>
+								function displayPinsProjectText(id) {
+									if(id == 'pins1'){
+										document.getElementById('pins2').style.display='none';
+										document.getElementById('pins3').style.display='none';
+										var p = document.getElementById('pins1')
+										p.style.display="block";
+									} else if (id == 'pins2') {
+										document.getElementById('pins1').style.display='none';
+										document.getElementById('pins3').style.display='none';
+										var p = document.getElementById('pins2')
+										p.style.display="block";
+									} else if (id == 'pins3') {
+										document.getElementById('pins2').style.display='none';
+										document.getElementById('pins1').style.display='none';
+										var p = document.getElementById('pins3')
+										p.style.display="block";
+									}
+								};
+							</script>
+							<br>
+							<div class="container" id="projectsContent">
+								<p id="pins1">Checkmark Is a document validation system that allows users to peer review, authenticate and process cases 
+									by passing cases and attached documents between users. Whilst managing this app I was able to add features, solve bugs and 
+									refactor code to create more efficient processes. 
+								</p>
+								<p id="pins2">
+									TimeSheets is a timekeeping system which allows users to input their hours spent working on particular cases. The system is able to 
+									search the company database to pull case data and produce reports for managers. During my time working on this application 
+									I was able to solve bugs, assist with new releases and implement new features.  
+								</p>
+								<p id="pins3">
+									DaRT (decision & reporting templates) is an MS Word addin which allows users to preload document templates by 
+									searching for the required case. The user is then able to edit and input sections with ease by selecting options on the sidebar. 
+									These options use the SharePoint API to pull prebuilt paragraph data to load into the document. During my time working with this 
+									application, I was able to solve bugs, assist with new releases and manage technical debt. 
+								</p>		
+							</div>
+					</section>
+					<!-- Technical capabilities -->
+					<section id="tech" class="three">
+						<div class="container">
+							<header>
+								<h2>Technical Capabilities</h2>
+							</header>
+							<p id="projectsContent">
+								Throughout my developing career I have become proficient in the use of popular tools/technologies such as <b>VS-code, GitHub, Azure DevOps, 
+								Docker, Postman, Jira, Vue, React, MSSQL, NodeJS, JavaScript, CSS</b> and <b>HTML</b>. Having worked in a professional tech department I have 
+								practiced the principles of current coding standards and agile methodologies whilst working to respond to stakeholder issues, deliver 
+								new updates and actively maintain web apps and data. 
+								<br><br>
+								These images are examples of the tools I have used and the team recources that I have contributed to or assisted in managing.
+							</p>
+							<div class="row">
+								<div class="col-4 col-12-mobile">
+									<article id='proj' class="item">
+										<a target="_blank"  class="image fit"><img src="pinsimages/git1EDIT.png" alt="" /></a>
+										<a target='_blank' class='techTitle'>
+											<header>
+												<h3 class='techTitle'>GitHub</h3>
+											</header>	
+										</a>
+									</article>
+								</div>
+								<div class="col-4 col-12-mobile">
+									<article id='proj' class="item">
+										<a target="_blank"  class="image fit"><img src="pinsimages/AZURESQUARE.PNG" alt="" /></a>
+										<a target='_blank' class='techTitle'>
+											<header>
+												<h3 class='techTitle'>Azure DevOps</h3>
+											</header>	
+										</a>
+									</article>
+								</div>
+								<div class="col-4 col-12-mobile">
+									<article id='proj' class="item">
+										<a target="_blank"  class="image fit"><img src="pinsimages/jira1ESIT.png" alt="" /></a>
+										<a target='_blank' class='techTitle'>
+											<header>
+												<h3 class='techTitle'>Jira</h3>
+											</header>	
+										</a>
+									</article>
+								</div>
+							</div>
+							<br>
+							<div class="row">
+								<div class="col-4 col-12-mobile">
+									<article id='proj' class="item">
+										<a target="_blank"  class="image fit"><img src="pinsimages/code.PNG" alt="" /></a>
+										<a target='_blank' class='techTitle'>
+											<header>
+												<h3 class='techTitle'>VS-Code</h3>
+											</header>	
+										</a>
+									</article>
+								</div>
+								<div class="col-4 col-12-mobile">
+									<article id='proj' class="item">
+										<a target="_blank"  class="image fit"><img src="pinsimages/DOCK.PNG" alt="" /></a>
+										<a target='_blank' class='techTitle'>
+											<header>
+												<h3 class='techTitle'>Docker</h3>
+											</header>	
+										</a>
+									</article>
+								</div>
+								<div class="col-4 col-12-mobile">
+									<article id='proj' class="item">
+										<a target="_blank"  class="image fit"><img src="pinsimages/SSQL.PNG" alt="" /></a>
+										<a target='_blank' class='techTitle'>
+											<header>
+												<h3 class='techTitle'>MSSQL</h3>
+											</header>	
+										</a>
+									</article>
+								</div>
+							</div>
+						</div>
+					</section>
 				<!-- Portfolio -->
-					<section id="portfolio" class="two">
+					<section id="portfolio" class="four">
 						<div class="container">
 
 							<header>
-								<h2>Projects</h2>
+								<h2>Personal Projects</h2>
 							</header>
 
 							<p id='projectsContent'>
-								These projects were built in VScode and make use of popular front-end technologies including React, Redux, HTML, CSS, Javascript,
-							   	JQuery and JSX. The initial ideas were begun as bootcamp assignments but deveoped their own shape and feel as my skills developed. 
+								These projects are applications I built in the easrly stages of my coding journey. They were built using of popular front-end technologies such as 
+								React, Redux, HTML, CSS, Javascript, JQuery and JSX. The initial ideas were begun as bootcamp assignments but deveoped their own logic and structure 
+								as the project progressed. 
 							    <br><br>
-								All apps are available to test and the code is available to view on GitHub. To test the app click the project image, to view the code click the project title. 
-								If you'd like more information on each project you can find more in the README.md file on GitHub.</p>
+								These projects are available to try out via GitHub pages and the code is available to view on the GitHub repository. To try the app 
+								click the project image, to view the code click the project title.
+							</p>
 
 							<div class="row">
-
 								<div class="col-4 col-12-mobile">
-
 									<article id='proj' class="item">
 										<a href="https://michael-et.github.io/Reddit-reader/" target="_blank"  class="image fit"><img src="NewImages/Screen Shot 2021-11-18 at 15.31.25.png" alt="" /></a>
 										<a href='https://github.com/Michael-ET/Reddit-reader' target='_blank' class='projTitle'>
 											<header>
 												<h3 class='projTitle'>Reddit-Reader</h3>
 											</header>	
-										</a>
-										
+										</a>			
 									</article>
-
-
-
-								</div>
-								
+								</div>		
 								<div class="col-4 col-12-mobile">
-
 									<article id='proj' class="item">
 										<a href="https://michael-et.github.io/Contacts-appointments-app/" target="_blank" class="image fit"><img src="NewImages/Screen Shot 2021-11-19 at 13.47.01.png" alt="" /></a>
 										<a href='https://github.com/Michael-ET/Contacts-appointments-app' target='_blank' class='projTitle'>
@@ -114,40 +264,24 @@
 												<h3 class='projTitle'>Contacts & Appointments app</h3>
 											</header>	
 										</a>
-										
 									</article>
-
-									<!-- <article id='proj' class="item">
-										<a href="https://michael-et.github.io/michael-et.github.io-PD/" target="_blank" class="image fit"><img src="NewImages/Screen Shot 2021-11-25 at 15.02.09.png" alt="" /></a>
-										<a href='https://github.com/Michael-ET/michael-et.github.io-PD' target='_blank' class='projTitle'>
-											<header>
-												<h3 class='projTitle'>Prime-Destinations Travel Co.</h3>
-											</header>	
-										</a>
-
-									</article>	 -->
 								</div>
-
-
 								<div class="col-4 col-12-mobile">
-											<article id='proj' class="item">
+									<article id='proj' class="item">
 										<a href="https://michael-et.github.io/audiolink/" target="_blank" class="image fit"><img src="NewImages/Screen Shot 2021-12-09 at 12.44.25.png" alt="" /></a>
 										<a href='https://github.com/Michael-ET/audiolink' target='_blank' class='projTitle'>
 											<header>
 												<h3 class='projTitle'>Audio-Link</h3>
 											</header>
 										</a>
-										
 									</article>
-
 								</div>
 							</div>
-
 						</div>
 					</section>
 
 				<!-- About Me -->
-					<section id="about" class="three">
+					<section id="about" class="two">
 						<div class="container">
 
 							<header>
@@ -157,10 +291,7 @@
 							<a href="#" class="image featured"><img id='aboutMePic' src="NewImages/portfolio-banner.jpeg" /></a>
 
 							<div id='aboutMe'>
-								<h3>The code...</h3>
-
-								
-									
+								<h3>The code...</h3>			
 								<p id='aboutMeContent'>
 									<br>
 									I began my journey in code as a university student being introduced to C#. I was tasked with building unique tools for audio triggering & manipulation.  
@@ -183,28 +314,24 @@
 								
 								<p id='aboutMeContent'>
 									<br>
-									At the core I am a creative person. I have an eye for detail in aesthetics and a passion for visionary design. As a computer musician I am technically minded and enjoy
-									working on complex projects (often on a collaborative basis with peers). My temperament is friendly, engaging and optimistic. I enjoy being outgoing and building strong 
-									social bonds. My interests include art, history, literature, movies, gaming, cooking and more.
+									At the core I am a technical and creative person. I have an eye for detail in aesthetics and a passion for visionary design. As a computer musician & 
+									developer I enjoy working on complex projects (often on a collaborative basis with peers). My temperament is friendly, engaging and optimistic. I am 
+									outgoing and enjoy building strong social bonds. My interests include art, history, literature, movies, gaming, cooking and more.
 									<br>
 									<br>
-									I have a varied working history and throughout it I've learnt how to perform effectively in many different capacities. My previous roles include, 
+									I have a varied employment history and throughout it I've learnt how to perform effectively in many different capacities. My previous roles include, 
 									quality assurance, data analysis, administration, sales, FOH/reception, customer service and more. 
 									<br>
 									<br>
 									Thanks for reading about me, I'd love to hear from you. If you'd like to connect please <b>Contact me below</b>.
 								</p>
-
-					
-
-							
 							</div>
 
 						</div>
 					</section>
 
 				<!-- Contact -->
-					<section id="contact" class="four">
+					<section id="contact" class="three">
 
 						<script>
 							function emailButton(){
@@ -232,22 +359,16 @@
 									</div>
 								</div>
 							</form>
-
 						</div>
 					</section>
-
 			</div>
-
 		<!-- Footer -->
 			<div id="footer">
-
 				<!-- Copyright -->
 					<ul class="copyright">
 						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
 					</ul>
-
 			</div>
-
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/jquery.scrolly.min.js"></script>
