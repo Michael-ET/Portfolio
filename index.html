@@ -70,15 +70,22 @@
 							<br>
 							<p id="projectsContent">
 								 During my time with PINS I have moved from EO (junior) to HEO (mid-level). In my current role I contribute to the development and 
-								 maintenance of web applications and internal tools that support critical business functions such as case tracking, planning application 
-								 and appeal management, document sharing, peer review, and templating. Working within an agile delivery team, I help manage feature builds and bug fixes,
-								 refine and estimate tickets, write robust automated tests, and support sprint planning and roadmap discussions. Alongside this I also support the wider 
-								 team with mentoring and managing junior developers.
+								 maintenance of web applications and internal tools that support critical business functions such as case tracking, planning application and appeal management, document sharing, peer review, and templating. Working within an agile delivery team, I help manage feature builds and bug fixes, refine and estimate tickets, write robust automated tests, and support sprint planning and roadmap discussions. Alongside this I also support the wider team with mentoring and managing junior developers.
 								<br><br>
 								To find out more about a project I've worked on click the image.
 							</p>							
-								<div class="row">
-									<div class="col-4 col-12-mobile" onclick="displayPinsProjectText('pins1')">
+							<div class="row">
+									<div class="col-4 col-12-mobile" onclick="displayPinsProjectTextRowOne('pinsBO')">
+										<article id='proj' class="item">
+											<a target="_blank"  class="image fit"><img src="pinsimages/newImages/BO.png" alt="" /></a>
+											<a target='_blank' class='pinsTitle'>
+												<header>
+													<h3 class='pinsTitle'>Appeals Back-Office Portal</h3>
+												</header>	
+											</a>
+										</article>
+									</div>	
+									<div class="col-4 col-12-mobile" onclick="displayPinsProjectTextRowOne('pins1')">
 										<article id='proj' class="item">
 											<a target="_blank"  class="image fit"><img src="pinsimages/C1SQUARE.PNG" alt="" /></a>
 											<a target='_blank' class='pinsTitle'>
@@ -88,17 +95,37 @@
 											</a>
 										</article>
 									</div>
-									<div class="col-4 col-12-mobile" onclick="displayPinsProjectText('pins2')">
+									<div class="col-4 col-12-mobile" onclick="displayPinsProjectTextRowOne('pins2')">
 										<article id='proj' class="item">
 											<a target="_blank"  class="image fit"><img src="pinsimages/d1edit.png" alt="" /></a>
 											<a target='_blank' class='pinsTitle'>
 												<header>
-													<h3 class='pinsTitle'>DaRT (Decisions & reporting templates)</h3>
+													<h3 class='pinsTitle'>DaRT</h3>
 												</header>	
 											</a>
 										</article>
 									</div>
-									<div class="col-4 col-12-mobile" onclick="displayPinsProjectText('pins3')">
+							</div>
+							<script>
+								function displayPinsProjectTextRowOne(id) {
+									const ids = ['pins1', 'pins2', 'pins3', 'pinsBO'];
+									ids.forEach(pid => {
+										document.getElementById(pid).style.display = (pid === id) ? 'block' : 'none';
+									});
+								}
+							</script>
+							<br>
+							<div class="container" id="projectsContent">
+								<p id="pinsBO"> The PINS back office portal for reviewing and processing planning appeals. This application allows PINS inspectors and third parties to submit appeals and supporting documents and track progress throughout the appeal life cycle. I contributed to  this project by building case setup flows, fixing a range of bugs, optimizing search functionality, refining document review processes and expanding test suites.
+								</p>
+								<p id="pins1">Checkmark is a document sharing application that allows users to create cases, upload documents to a linked SharePoint database, peer review, mark eachothers work and track case progress. I contributed heavily to this project with new feature builds, optimizing logic to improve performance, large scale refactoring, finding solutions to complex bugs, creating new documentation, mentoring junior developers working on the project and liasing with stakeholders to ensure their needs were met.
+								</p>
+								<p id="pins2">
+								TimeSheets is a timekeeping system which allows users to input their hours spent working on particular cases. The system is able to search the company database to pull data and produce reports for managers. During my time working on this application I was able to solve bugs, assist with new releases and implement new features.  
+								</p>	
+							</div>
+							<div class="row">
+									<div class="col-4 col-12-mobile" onclick="displayPinsProjectTextRowTwo('pins3')">
 										<article id='proj' class="item">
 											<a target="_blank"  class="image fit"><img src="pinsimages/T1EDIT.png" alt="" /></a>
 											<a target='_blank' class='pinsTitle'>
@@ -111,36 +138,15 @@
 								</div>
 							</div>
 							<script>
-								function displayPinsProjectText(id) {
-									if(id == 'pins1'){
-										document.getElementById('pins2').style.display='none';
-										document.getElementById('pins3').style.display='none';
-										var p = document.getElementById('pins1')
-										p.style.display="block";
-									} else if (id == 'pins2') {
-										document.getElementById('pins1').style.display='none';
-										document.getElementById('pins3').style.display='none';
-										var p = document.getElementById('pins2')
-										p.style.display="block";
-									} else if (id == 'pins3') {
-										document.getElementById('pins2').style.display='none';
-										document.getElementById('pins1').style.display='none';
-										var p = document.getElementById('pins3')
-										p.style.display="block";
-									}
+								function displayPinsProjectTextRowTwo(id) {
+									const ids = ['pins1', 'pins2', 'pins3', 'pinsBO'];
+									ids.forEach(pid => {
+										document.getElementById(pid).style.display = (pid === id) ? 'block' : 'none';
+									});
 								};
 							</script>
 							<br>
 							<div class="container" id="projectsContent">
-								<p id="pins1">Checkmark Is a document validation system that allows users to peer review, authenticate and process cases 
-									by passing cases and attached documents between users. Whilst managing this app I was able to add features, solve bugs and 
-									refactor code to create more efficient processes. 
-								</p>
-								<p id="pins2">
-									TimeSheets is a timekeeping system which allows users to input their hours spent working on particular cases. The system is able to 
-									search the company database to pull case data and produce reports for managers. During my time working on this application 
-									I was able to solve bugs, assist with new releases and implement new features.  
-								</p>
 								<p id="pins3">
 									DaRT (decision & reporting templates) is an MS Word addin which allows users to preload document templates by 
 									searching for the required case. The user is then able to edit and input sections with ease by selecting options on the sidebar. 
@@ -148,29 +154,70 @@
 									application, I was able to solve bugs, assist with new releases and manage technical debt. 
 								</p>		
 							</div>
+							<style>
+							#pins1, #pins2, #pins3, #pinsBO {
+								display: none;
+							}
+							</style>
+
 					</section>
 					<!-- Technical capabilities -->
 					<section id="tech" class="three">
 						<div class="container">
 							<header>
-								<h2>Technical Capabilities</h2>
+								<h2>Technical Capabilities & Snapshots of my work</h2>
 							</header>
 							<p id="projectsContent">
-Over time, I’ve grown my technical skillset and now work confidently with a wide range of tools and technologies. Alongside core languages and frameworks like <b>JavaScript</b>, <b>Node.js</b>, <b>Vue</b>, <b>React</b>, <b>HTML</b>, <b>CSS</b>, and <b>MSSQL</b>, I’ve expanded my stack with tools such as <b>WebStorm</b>, <b>Prisma</b>, and the <b>Nunjucks</b> templating framework. I use <b>Swagger</b> for API design and documentation, and follow <b>Test-Driven Development (TDD)</b> to write reliable, maintainable code. My daily workflow includes tools like <b>GitHub</b>, <b>Azure DevOps</b>, <b>Docker</b>, <b>Postman</b>, and <b>Jira</b>, and I make regular use of AI coding assistants like <b>GitHub Copilot</b> to automate repetitive tasks and improve development speed. Working in a professional tech environment, I continue to apply modern coding standards and agile practices while contributing to new features, addressing stakeholder needs, and maintaining existing applications.
-
-
-
-
+								Over time, I’ve grown my technical skillset and now work confidently with a wide range of tools and technologies. Alongside core languages and frameworks like <b>JavaScript</b>, <b>Node.js</b>, <b>Vue</b>, <b>React</b>, <b>HTML</b>, <b>CSS</b>, and <b>MSSQL</b>, I’ve expanded my stack with tools such as <b>WebStorm</b>, <b>Prisma</b>, and the <b>Nunjucks</b> templating framework. I use <b>Swagger</b> for API design and documentation, and follow <b>Test-Driven Development (TDD)</b> to write reliable, maintainable code. My daily workflow includes tools like <b>GitHub</b>, <b>Azure DevOps</b>, <b>Docker</b>, <b>Postman</b>, and <b>Jira</b>, and I make regular use of AI coding assistants like <b>GitHub Copilot</b> to automate repetitive tasks and improve development speed. Working in a professional tech environment, I continue to apply modern coding standards and agile practices while contributing to new features, addressing stakeholder needs, and maintaining existing applications.
 								<br><br>
 								Pictured below are utilizations of these tools in the context of my work. My tech stack is continually growing to adapt to new projects and goals.
 							</p>
 							<div class="row">
 								<div class="col-4 col-12-mobile">
 									<article id='proj' class="item">
+										<a target="_blank"  class="image fit"><img src="./pinsimages/newImages/refactor.PNG" alt="" /></a>
+										<a target='_blank' class='techTitle'>
+											<header>
+												<h3 class='techTitle'>Refactoring & Architecture Design</h3>
+											</header>	
+										</a>
+									</article>
+								</div>
+								<div class="col-4 col-12-mobile">
+									<article id='proj' class="item">
+										<a  
+										href="https://www.dropbox.com/scl/fi/0n5f14og23szjfebmb80r/OSS-Checkmark-refactor-project-guidance.pdf?rlkey=zz71uix7igxw25rsrcdlggs9l&st=glwoq6b7&dl=0" 
+										target="_blank"  class="image fit">
+										<img src="./pinsimages/newImages/confluence.png" alt="" /></a>
+										<a target='_blank' class='techTitle'>
+											<header>
+												<h3 class='techTitle'>Documentation/Confluence</h3>
+												<h4><i>(Click image to link to an example of my work)</i></h4>
+											</header>	
+										</a>
+									</article>
+								</div>
+								<div class="col-4 col-12-mobile">
+									<article id='proj' class="item">
+										<a target="_blank"  class="image fit"><img src="./pinsimages/newImages/test suite.png" alt="" /></a>
+										<a target='_blank' class='techTitle'>
+											<header>
+												<h3 class='techTitle'>Jest test suites & TDD</h3>
+											</header>	
+										</a>
+									</article>
+								</div>
+							</div>
+
+							<br>
+
+							<div class="row">
+								<div class="col-4 col-12-mobile">
+									<article id='proj' class="item">
 										<a target="_blank"  class="image fit"><img src="pinsimages/git1EDIT.png" alt="" /></a>
 										<a target='_blank' class='techTitle'>
 											<header>
-												<h3 class='techTitle'>GitHub</h3>
+												<h3 class='techTitle'>GitHub & PR Reviews</h3>
 											</header>	
 										</a>
 									</article>
@@ -180,23 +227,25 @@ Over time, I’ve grown my technical skillset and now work confidently with a wi
 										<a target="_blank"  class="image fit"><img src="pinsimages/AZURESQUARE.PNG" alt="" /></a>
 										<a target='_blank' class='techTitle'>
 											<header>
-												<h3 class='techTitle'>Azure DevOps</h3>
+												<h3 class='techTitle'>Azure piplines & release versioning</h3>
 											</header>	
 										</a>
 									</article>
 								</div>
 								<div class="col-4 col-12-mobile">
 									<article id='proj' class="item">
-										<a target="_blank"  class="image fit"><img src="pinsimages/jira1ESIT.png" alt="" /></a>
+										<a target="_blank"  class="image fit"><img src="pinsimages/newImages/BOjira.png" alt="" /></a>
 										<a target='_blank' class='techTitle'>
 											<header>
-												<h3 class='techTitle'>Jira</h3>
+												<h3 class='techTitle'>Jira & Agile workflows</h3>
 											</header>	
 										</a>
 									</article>
 								</div>
 							</div>
+
 							<br>
+
 							<div class="row">
 								<div class="col-4 col-12-mobile">
 									<article id='proj' class="item">
@@ -234,11 +283,9 @@ Over time, I’ve grown my technical skillset and now work confidently with a wi
 				<!-- Portfolio -->
 					<section id="portfolio" class="four">
 						<div class="container">
-
 							<header>
 								<h2>Personal Projects</h2>
 							</header>
-
 							<p id='projectsContent'>
 								These projects are applications I built in the early stages of my coding journey. They were built using technologies such as 
 								React, Redux, HTML, CSS, Javascript, JQuery and JSX. The initial ideas were begun as bootcamp assignments but deveoped their own logic and structure 
