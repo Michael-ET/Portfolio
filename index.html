@@ -74,7 +74,7 @@
 								<b>To find out more about a project I've worked on click the image.</b>
 							</p>							
 							<div class="row">
-									<div class="col-4 col-12-mobile" onclick="displayPinsProjectTextRowOne('pinsBO')">
+									<div class="col-4 col-12-mobile">
 										<article id='proj' class="item">
 											<a target="_blank"  class="image fit"><img src="pinsimages/newImages/BO.png" alt="" /></a>
 											<a target='_blank' class='pinsTitle'>
@@ -82,83 +82,54 @@
 													<h3 class='pinsTitle'>Appeals Back-Office Portal</h3>
 												</header>	
 											</a>
+											<div class="overlay" id="pinsBO">
+												<p>The PINS back office portal for reviewing and processing planning appeals. This application allows PINS inspectors and third parties to submit appeals and supporting documents and track progress throughout the appeal life cycle. I contributed to  this project by building case setup flows, fixing a range of bugs, optimizing search functionality, refining document review processes and expanding test suites.
+											</div>
 										</article>
 									</div>	
-									<div class="col-4 col-12-mobile" onclick="displayPinsProjectTextRowOne('pins1')">
+									<div class="col-4 col-12-mobile">
 										<article id='proj' class="item">
-											<a target="_blank"  class="image fit"><img src="pinsimages/C1SQUARE.PNG" alt="" /></a>
+											<a target="_blank" class="image fit">
+												<img src="pinsimages/C1SQUARE.PNG" alt="" />
+											</a>								
 											<a target='_blank' class='pinsTitle'>
 												<header>
 													<h3 class='pinsTitle'>Checkmark</h3>
-												</header>	
+												</header>
 											</a>
+											<div class="overlay" id="pins1">
+												<p>Checkmark is a document sharing application that allows users to create cases, upload documents to a linked SharePoint database, peer review, mark eachothers work and track case progress. I contributed heavily to this project with new feature builds, optimizing logic to improve performance, large scale refactoring, finding solutions to complex bugs, creating new documentation, mentoring junior developers working on the project and liasing with stakeholders to ensure their needs were met.</p>
+											</div>
 										</article>
 									</div>
-									<div class="col-4 col-12-mobile" onclick="displayPinsProjectTextRowOne('pins2')">
+									<div class="col-4 col-12-mobile">
 										<article id='proj' class="item">
 											<a target="_blank"  class="image fit"><img src="pinsimages/d1edit.png" alt="" /></a>
 											<a target='_blank' class='pinsTitle'>
 												<header>
 													<h3 class='pinsTitle'>DaRT</h3>
-												</header>	
-											</a>
+												</header>
+											</a>	
+											<div class="overlay" id="pins2">
+												<p>DaRT (decision & reporting templates) is an MS Word addin which allows users to preload document templates by searching for the required case. The user is then able to edit and input sections with ease by selecting options on the sidebar. These options use the SharePoint API to pull prebuilt paragraph data to load into the document. During my time working with this application, I was able to solve bugs, assist with new releases and manage technical debt.</p>
+											</div>
 										</article>
 									</div>
-							</div>
-							<script>
-								function displayPinsProjectTextRowOne(id) {
-									const ids = ['pins1', 'pins2', 'pins3', 'pinsBO'];
-									ids.forEach(pid => {
-										document.getElementById(pid).style.display = (pid === id) ? 'block' : 'none';
-									});
-								}
-							</script>
-							<br>
-							<div class="container" id="projectsContent">
-								<p id="pinsBO"> The PINS back office portal for reviewing and processing planning appeals. This application allows PINS inspectors and third parties to submit appeals and supporting documents and track progress throughout the appeal life cycle. I contributed to  this project by building case setup flows, fixing a range of bugs, optimizing search functionality, refining document review processes and expanding test suites.
-								</p>
-								<p id="pins1">Checkmark is a document sharing application that allows users to create cases, upload documents to a linked SharePoint database, peer review, mark eachothers work and track case progress. I contributed heavily to this project with new feature builds, optimizing logic to improve performance, large scale refactoring, finding solutions to complex bugs, creating new documentation, mentoring junior developers working on the project and liasing with stakeholders to ensure their needs were met.
-								</p>
-								<p id="pins2">
-								TimeSheets is a timekeeping system which allows users to input their hours spent working on particular cases. The system is able to search the company database to pull data and produce reports for managers. During my time working on this application I was able to solve bugs, assist with new releases and implement new features.  
-								</p>	
-							</div>
-							<div class="row">
-									<div class="col-4 col-12-mobile" onclick="displayPinsProjectTextRowTwo('pins3')">
+									<div class="col-4 col-12-mobile">
 										<article id='proj' class="item">
 											<a target="_blank"  class="image fit"><img src="pinsimages/T1EDIT.png" alt="" /></a>
-											<a target='_blank' class='pinsTitle'>
+											<a target='_blank' class='pinsTitle'></a>
 												<header>
 													<h3 class='pinsTitle'>TimeSheets</h3>
-												</header>	
+												</header>
 											</a>
+											<div class="overlay" id="pins3">
+												<p>TimeSheets is a timekeeping system which allows users to input their hours spent working on particular cases. The system is able to search the company database to pull data and produce reports for managers. During my time working on this application I was able to solve bugs, assist with new releases and implement new features.</p>
+											</div>
 										</article>
 									</div>
 								</div>
 							</div>
-							<script>
-								function displayPinsProjectTextRowTwo(id) {
-									const ids = ['pins1', 'pins2', 'pins3', 'pinsBO'];
-									ids.forEach(pid => {
-										document.getElementById(pid).style.display = (pid === id) ? 'block' : 'none';
-									});
-								};
-							</script>
-							<br>
-							<div class="container" id="projectsContent">
-								<p id="pins3">
-									DaRT (decision & reporting templates) is an MS Word addin which allows users to preload document templates by 
-									searching for the required case. The user is then able to edit and input sections with ease by selecting options on the sidebar. 
-									These options use the SharePoint API to pull prebuilt paragraph data to load into the document. During my time working with this 
-									application, I was able to solve bugs, assist with new releases and manage technical debt. 
-								</p>		
-							</div>
-							<style>
-							#pins1, #pins2, #pins3, #pinsBO {
-								display: none;
-							}
-							</style>
-
 					</section>
 					<!-- Technical capabilities -->
 					<section id="tech" class="three">
@@ -172,165 +143,124 @@
 								Pictured below are utilizations of these tools in the context of my work. My tech stack is continually growing to adapt to new projects and goals. <b>Click on an image for more details on my experience with each tool or capability</b>.
 							</p>
 							<div class="row">
-								<div class="col-4 col-12-mobile" onclick="displayTechStackText('techStackText1')">
+								<div class="col-4 col-12-mobile">
 									<article id='proj' class="item">
 										<a target="_blank"  class="image fit"><img src="./pinsimages/newImages/refactor.PNG" alt="" /></a>
 										<a target='_blank' class='techTitle'>
 											<header>
 												<h3 class='techTitle'>Refactoring & Architecture Design</h3>
-											</header>	
+											</header>
+											<div class="overlay" id="techStackText1"><p>During my time as lead developer on Checkmark I was responsible for planning and executing a large scale refactor of the codebase. This involved redesigning the application architecture to improve performance, maintainability, and scalability. I created a detailed project plan, breaking down the refactor into manageable tasks and setting milestones to track progress. I collaborated closely with stakeholders to ensure the refactor aligned with business needs and technical requirements. Working as a contributing developer to the appeals back office portal I worked within an agile team to expand the project which was built using a unique style of Nunjucks mapping architecture. This involved working alongside a large team of developers to build new features, solve complex bugs and optimize performance. </p></div>
 										</a>
 									</article>
 								</div>
-								<div class="col-4 col-12-mobile" onclick="displayTechStackText('techStackText2')">
-									<article id='proj' class="item">
-										<a   
-										target="_blank"  class="image fit">
-										<img src="./pinsimages/newImages/confluence.png" alt="" /></a>
-										<a target='_blank' class='techTitle'>
-											<header>
-												<h3 class='techTitle'>Documentation/Confluence</h3>
-												<h4><i>(Click image to link to an example of my work)</i></h4>
-											</header>	
+									<div class="col-4 col-12-mobile">
+									<article class="item">
+										<a target="_blank" class="image fit">
+										<img src="./pinsimages/newImages/confluence.png" alt="" />
 										</a>
+										<header>
+											<h3 class="techTitle">Documentation/Confluence</h3>
+											<h4><i>(Link to work available)</i></h4>
+										</header>
+										<div class="overlay" id="techStackText2">
+										<p>
+											My work with the Checkmark application involved creating and maintaining comprehensive documentation to support both the continuation of the refactor project as it was passed down to junior developers. This gave me the opportunity to improve my technical writing skills and ability to communicate complex ideas clearly and concisely. Please click <a href="https://www.dropbox.com/scl/fi/0n5f14og23szjfebmb80r/OSS-Checkmark-refactor-project-guidance.pdf?rlkey=zz71uix7igxw25rsrcdlggs9l&st=fwx1dduy&dl=0" class="doc-link" target="_blank">this link</a> to view a copy of the documentation I created for the Checkmark refactor project.</p></div>
 									</article>
-								</div>
-								<div class="col-4 col-12-mobile" onclick="displayTechStackText('techStackText3')">
+									</div>
+								<div class="col-4 col-12-mobile">
 									<article id='proj' class="item">
 										<a target="_blank"  class="image fit"><img src="./pinsimages/newImages/test suite.png" alt="" /></a>
 										<a target='_blank' class='techTitle'>
 											<header>
 												<h3 class='techTitle'>Jest test suites & TDD</h3>
 											</header>	
+											<div class="overlay" id="techStackText3"><p>During my time working on the PINS appeals back office portal I was responsible for creating and maintaining a comprehensive suite of automated tests using the Jest testing framework. This involved writing unit tests, integration tests, and end-to-end tests to ensure the application was functioning as expected and to catch any potential bugs or issues before they reached production.</p></div>
 										</a>
 									</article>
 								</div>
-								<div class="container" id="projectsContent">
-									<br>
-									<p id="techStackText1">  
-										During my time as lead developer on Checkmark I was responsible for planning and executing a large scale refactor of the codebase. This involved redesigning the application architecture to improve performance, maintainability, and scalability. I created a detailed project plan, breaking down the refactor into manageable tasks and setting milestones to track progress. I collaborated closely with stakeholders to ensure the refactor aligned with business needs and technical requirements. 
-
-										Working as a contributing developer to the appeals back office portal I worked within an agile team to expand the project which was built using a unique style of Nunjucks mapping architecture. This involved working alongside a large team of developers to build new features, solve complex bugs and optimize performance.
-									</p>
-									<p id="techStackText2"> 
-										My work with the Checkmark application involved creating and maintaining comprehensive documentation to support both the continuation of the refactor project as it was passed down to junior developers. This gave me the opportunity to improve my technical writing skills and ability to communicate complex ideas clearly and concisely. Please click <a href="https://www.dropbox.com/scl/fi/0n5f14og23szjfebmb80r/OSS-Checkmark-refactor-project-guidance.pdf?rlkey=zz71uix7igxw25rsrcdlggs9l&st=fwx1dduy&dl=0" class="doc-link">this link</a> to view a copy of the documentation I created for the Checkmark refactor project.
-									</p>
-									<p id="techStackText3">
-										During my time working on the PINS appeals back office portal I was responsible for creating and maintaining a comprehensive suite of automated tests using the Jest testing framework. This involved writing unit tests, integration tests, and end-to-end tests to ensure the application was functioning as expected and to catch any potential bugs or issues before they reached production.
-									</p>	
-								</div>
 							</div>
+							<br>
 							<div class="row">
-								<div class="col-4 col-12-mobile" onclick="displayTechStackText('techStackText4')">
+								<div class="col-4 col-12-mobile">
 									<article id='proj' class="item">
 										<a target="_blank"  class="image fit"><img src="pinsimages/git1EDIT.png" alt="" /></a>
 										<a target='_blank' class='techTitle'>
 											<header>
 												<h3 class='techTitle'>GitHub & PR Reviews</h3>
 											</header>	
+											<div class="overlay" id="techStackText4"><p>I use GitHub daily for version control, branching, and collaboration. In my role at PINS I regularly create and review pull requests (PRs) to ensure code quality and consistency across the team. Reviewing PRs involves checking for adherence to coding standards, verifying that new code is well-tested, and providing constructive feedback to peers. This process helps maintain a high standard of code quality and fosters a collaborative team environment.</p></div>
 										</a>
 									</article>
 								</div>
-								<div class="col-4 col-12-mobile" onclick="displayTechStackText('techStackText5')">
+								<div class="col-4 col-12-mobile">
 									<article id='proj' class="item">
 										<a target="_blank"  class="image fit"><img src="pinsimages/AZURESQUARE.PNG" alt="" /></a>
 										<a target='_blank' class='techTitle'>
 											<header>
 												<h3 class='techTitle'>Azure piplines & release versioning</h3>
 											</header>	
+											<div class="overlay" id="techStackText2"><p>I have experience setting up and managing Azure DevOps pipelines for CI/CD. This includes configuring build and release pipelines to automate the testing and deployment of applications. I have worked with versioning strategies to ensure that releases are properly tagged and documented, making it easier to track changes and roll back if necessary. Using Azure DevOps has helped streamline our development workflow and improve the reliability of our deployments.</p></div>
 										</a>
 									</article>
 								</div>
-								<div class="col-4 col-12-mobile" onclick="displayTechStackText('techStackText6')">
+								<div class="col-4 col-12-mobile">
 									<article id='proj' class="item">
 										<a target="_blank"  class="image fit"><img src="pinsimages/newImages/BOjira.png" alt="" /></a>
 										<a target='_blank' class='techTitle'>
 											<header>
 												<h3 class='techTitle'>Jira & Agile workflows</h3>
 											</header>	
+											<div class="overlay" id="techStackText3"><p>My experience with Jira includes using it to manage tasks, track progress, and facilitate communication within the team. I have utilized Jira's features to create user stories, plan sprints, and monitor the status of development work. This has helped ensure that projects are delivered on time and that any issues are identified and addressed quickly. Additionally, I have experience with Agile methodologies and have participated in daily stand-ups, sprint planning, and retrospectives to continuously improve our development processes.</p></div>
 										</a>
 									</article>
-								</div>
-								<div class="container" id="projectsContent">
-									<br>
-									<p id="techStackText4">  
-										I use GitHub daily for version control, branching, and collaboration. In my role at PINS I regularly create and review pull requests (PRs) to ensure code quality and consistency across the team. Reviewing PRs involves checking for adherence to coding standards, verifying that new code is well-tested, and providing constructive feedback to peers. This process helps maintain a high standard of code quality and fosters a collaborative team environment.
-									</p>
-									<p id="techStackText5"> 
-										I have experience setting up and managing Azure DevOps pipelines for CI/CD. This includes configuring build and release pipelines to automate the testing and deployment of applications. I have worked with versioning strategies to ensure that releases are properly tagged and documented, making it easier to track changes and roll back if necessary. Using Azure DevOps has helped streamline our development workflow and improve the reliability of our deployments.
-									</p>
-									<p id="techStackText6">
-										My experience with Jira includes using it to manage tasks, track progress, and facilitate communication within the team. I have utilized Jira's features to create user stories, plan sprints, and monitor the status of development work. This has helped ensure that projects are delivered on time and that any issues are identified and addressed quickly. Additionally, I have experience with Agile methodologies and have participated in daily stand-ups, sprint planning, and retrospectives to continuously improve our development processes.
-									</p>	
-								</div>
 							</div>
 							<div class="row">
-								<div class="col-4 col-12-mobile" onclick="displayTechStackText('techStackText7')">
+								<div class="col-4 col-12-mobile">
 									<article id='proj' class="item">
 										<a target="_blank"  class="image fit"><img src="pinsimages/code.PNG" alt="" /></a>
 										<a target='_blank' class='techTitle'>
 											<header>
 												<h3 class='techTitle'>VS-Code</h3>
 											</header>	
+											<div class="overlay" id="techStackText4"><p>I use VS Code as my primary code editor for development. It offers a wide range of extensions and features that enhance productivity and streamline the coding process. I have customized my VS Code setup with themes, keybindings, and extensions that support JavaScript, Node.js, and other technologies I work with.</p></div>
 										</a>
 									</article>
 								</div>
-								<div class="col-4 col-12-mobile" onclick="displayTechStackText('techStackText8')">
+								<div class="col-4 col-12-mobile">
 									<article id='proj' class="item">
 										<a target="_blank"  class="image fit"><img src="pinsimages/DOCK.PNG" alt="" /></a>
 										<a target='_blank' class='techTitle'>
 											<header>
 												<h3 class='techTitle'>Docker</h3>
 											</header>	
+											<div class="overlay" id="techStackText5"><p>I have experience using Docker to containerize applications and manage development environments. This includes creating Dockerfiles, building images, and running containers to ensure consistency across different stages of development and deployment. Using Docker has helped simplify the setup process and improve collaboration within the team.</p></div>
 										</a>
 									</article>
 								</div>
-								<div class="col-4 col-12-mobile" onclick="displayTechStackText('techStackText9')">
+								<div class="col-4 col-12-mobile">
 									<article id='proj' class="item">
 										<a target="_blank"  class="image fit"><img src="pinsimages/SSQL.PNG" alt="" /></a>
 										<a target='_blank' class='techTitle'>
 											<header>
 												<h3 class='techTitle'>MSSQL</h3>
 											</header>	
+											<div class="overlay" id="techStackText9"><p>My experience with MSSQL includes designing and implementing database schemas, writing complex queries, and optimizing database performance. I have worked with stored procedures, triggers, and views to encapsulate business logic and improve data access patterns. Additionally, I have experience with database migration strategies and tools to ensure smooth transitions between different database versions.</p></div>
 										</a>
 									</article>
-								</div>
-								<div class="container" id="projectsContent">
-									<br>
-									<p id="techStackText7">  
-										I use VS Code as my primary code editor for development. It offers a wide range of extensions and features that enhance productivity and streamline the coding process. I have customized my VS Code setup with themes, keybindings, and extensions that support JavaScript, Node.js, and other technologies I work with.
-									</p>
-									<p id="techStackText8"> 
-										I have experience using Docker to containerize applications and manage development environments. This includes creating Dockerfiles, building images, and running containers to ensure consistency across different stages of development and deployment. Using Docker has helped simplify the setup process and improve collaboration within the team.
-									</p>
-									<p id="techStackText9">
-										My experience with MSSQL includes designing and implementing database schemas, writing complex queries, and optimizing database performance. I have worked with stored procedures, triggers, and views to encapsulate business logic and improve data access patterns. Additionally, I have experience with database migration strategies and tools to ensure smooth transitions between different database versions.
-									</p>
-								</div>
 							</div>
 						</div>
 							<script>
-								const ids = ['techStackText1', 'techStackText2', 'techStackText3','techStackText4', 'techStackText5', 'techStackText6', 'techStackText7', 'techStackText8', 'techStackText9'];
-
-								ids.forEach(pid => {
-											document.getElementById(pid).style.display = 'none';
-									});
-								function displayTechStackText(id) {
-									ids.forEach(pid => {
-										document.getElementById(pid).style.display = (pid === id) ? 'block' : 'none';
-									});
-								};
+								document.querySelectorAll('.item').forEach(item => {
+									item.addEventListener('click', () => {
+										const isActive = item.classList.contains('active');
+										document.querySelectorAll('.item').forEach(el => el.classList.remove('active'));
+										if (!isActive) {
+										item.classList.add('active');
+										}
+									});			
+								});
 							</script>
-							<style>
-								.doc-link {
-									text-decoration: solid; /* removes underline */
-									color: blue;           /* makes it blue */
-								}
-
-								.doc-link:hover {
-									text-decoration: underline; /* underline only when hovered (optional) */
-								}
-							</style>
 					</section>
 				<!-- Portfolio -->
 					<section id="portfolio" class="four">
@@ -343,8 +273,8 @@
 								React, Redux, HTML, CSS, Javascript, JQuery and JSX. The initial ideas were begun as bootcamp assignments but deveoped their own logic and structure 
 								as the project progressed. 
 							    <br><br>
-								These projects are available to try out via GitHub pages and the code is available to view on the GitHub repository. To try the app 
-								click the project image, to view the code click the project title.
+								These projects are available to try out via GitHub pages and the code is available to view on the GitHub repository. <b>To try the app 
+								click the project image, to view the code click the project title.<
 							</p>
 
 							<div class="row">
